@@ -1,5 +1,8 @@
 package Arrays;
 
+/*
+Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+ */
 public class MergeSorted {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int j=0;
