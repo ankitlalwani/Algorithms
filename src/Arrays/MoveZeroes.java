@@ -4,6 +4,7 @@ package Arrays;
 P283: Given an array nums, write a function to move
 all 0's to the end of it while maintaining the relative
 order of the non-zero elements.
+The output is the array
  */
 public class MoveZeroes {
     public void moveZeroes(int[] nums) {
