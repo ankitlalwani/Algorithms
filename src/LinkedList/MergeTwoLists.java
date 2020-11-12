@@ -5,6 +5,8 @@ P21 - Merge two sorted linked lists and return it as a new sorted list.
 The new list should be made by splicing together the nodes of the first two lists.
  */
 
+import org.w3c.dom.*;
+
 import java.util.LinkedList;
 
 public class MergeTwoLists {
@@ -37,22 +39,63 @@ public class MergeTwoLists {
         return head.next;
     }
 
+
+
     public static void main(String[] args){
-        LinkedList l1 = new LinkedList();
-        l1.add(1);
-        l1.add(2);
-        l1.add(4);
 
-        LinkedList l2 = new LinkedList();
-        l2.add(1);
-        l2.add(3);
-        l2.add(4);
+        LLFunctions l1 = new LLFunctions();
+        l1.add(new ListNode(1));
+        l1.add(new ListNode(2));
+        l1.add(new ListNode(5));
+        System.out.print("L1 - ");
+        l1.print();
 
+        LLFunctions l2 = new LLFunctions();
+        l2.add(new ListNode(1));
+        l2.add(new ListNode(3));
+        l2.add(new ListNode(4));
+        System.out.print("L2 - ");
+        l2.print();
 
+        MergeTwoLists m2 = new MergeTwoLists();
+       l1.head =  m2.mergeTwoLists(l1.head,l2.head);
+        System.out.print("L3 - ");
+       l1.print();
     }
 }
- class ListNode {
+ class ListNode{
       int val;
       ListNode next;
-      ListNode(int x) { val = x; }
-  }
+      ListNode(int x) {
+          val = x; }
+ }
+ class LLFunctions{
+    ListNode head;
+
+     public void add(ListNode data){
+
+         if(head==null) {
+             head = data;
+         }else {
+             ListNode current = head;
+
+             if (current != null) {
+                 while (current.next != null) {
+                     current = current.next;
+                 }
+                 current.next = data;
+             }
+         }
+
+     }
+
+     public void print(){
+         ListNode temp = head;
+         System.out.print(" Print List: ");
+         while (temp!=null){
+             System.out.print(" "+ temp.val);
+             temp = temp.next;
+         }
+         System.out.println();
+     }
+ }
