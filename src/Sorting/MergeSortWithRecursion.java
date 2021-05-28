@@ -1,6 +1,9 @@
 package Sorting;
 
-//merge sort using recursion
+/*Merge sort with recursion
+    Big O Time complexity:
+        average: nlog(n)
+        worst: nlog(n)  */
 
 public class MergeSortWithRecursion {
 

@@ -27,7 +27,7 @@ public class InsertionSort {
         int[] A = {2,1,6,10,22,98,45,78,25,11,7};
         int[] A1 = {5,2,4,6,1,3};
 
-        System.out.println("before merge sort");
+        System.out.println("before insertion sort");
 
         for (int i=0;i<A.length;i++){
             System.out.print(A[i]+",");
@@ -37,7 +37,7 @@ public class InsertionSort {
         InsertionSort insertionSort = new InsertionSort();
         int[] B = insertionSort.insertionsort(A);
 
-        System.out.println("after merge sort");
+        System.out.println("after insertion sort");
 
         for (int i=0;i<B.length;i++){
             System.out.print(B[i]+",");
